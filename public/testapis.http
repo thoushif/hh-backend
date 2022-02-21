@@ -1,0 +1,164 @@
+
+PUT http://localhost:1337/api/helps/46
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ0MTExOTQ3LCJleHAiOjE2NDY3MDM5NDd9.c1OS7D49au9jVC35qCjLnJQ6r-9DLw7kUUtthu1Hn98
+
+
+{
+    "data":{
+      "name": "happydays!!",
+      "description": "ashiq",
+      "categories":
+        [1,2,3]
+      
+      
+    }
+}
+
+###
+GET http://localhost:1337/api/helps?filters[id]=46&populate[categories][*]&populate[owner][fields][0]=username&populate[categories][filters][active]=true
+
+###
+
+DELETE http://localhost:1337/api/helps/26
+content-type: application/json
+
+###
+
+DELETE http://localhost:1337/api/helps/26
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ0MDMwMTg4LCJleHAiOjE2NDY2MjIxODh9._CqRiKZEdM7OShGenK7m6wD3YBwvIbRVomV4G7ke7tY
+
+
+###
+
+PUT http://localhost:1337/api/helps/26
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ0MDMwMTg4LCJleHAiOjE2NDY2MjIxODh9._CqRiKZEdM7OShGenK7m6wD3YBwvIbRVomV4G7ke7tY
+
+
+{
+    "data":{
+      "name": "tell me a story again-updated",
+      "description": "I need help with a story again"
+    }
+}
+
+
+
+###
+
+GET http://localhost:1337/api/helps/suggestions?slug=i-can-sing-a-song-for-you-1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ0MTExOTQ3LCJleHAiOjE2NDY3MDM5NDd9.c1OS7D49au9jVC35qCjLnJQ6r-9DLw7kUUtthu1Hn98
+# headers
+###
+
+GET http://localhost:1337/api/helps/me/false
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ0MTExOTQ3LCJleHAiOjE2NDY3MDM5NDd9.c1OS7D49au9jVC35qCjLnJQ6r-9DLw7kUUtthu1Hn98
+# headers
+###
+
+GET http://localhost:1337/api/users/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0NzI0NjYzLCJleHAiOjE2NDczMTY2NjN9.fWjUL_C1fIP9hnPJElHSKf1EY_Nhr9oC0DI4DXafKs0
+# headers
+
+###
+POST http://localhost:1337/api/auth/forgot-password
+content-type: application/json 
+
+{
+      "email": "aazam555@gmail.com"
+}
+  
+###
+POST http://localhost:1337/api/auth/reset-password
+content-type: application/json 
+
+{
+      "code": "36ab9941cf298210c1aa004fc05345593b3ca9bea655a2207d4c2262b0f5799c9c49261b1ebf7cb621a6135e4702e71442a984ebf1a10ef6c81d4088ab0ce056",
+      "password": "123456789",
+    "passwordConfirmation": "123456789"
+}
+ 
+###
+POST http://localhost:1337/api/auth/forgot-password
+content-type: application/json 
+
+{
+      "email": "aazam555@gmailcom"
+}
+ 
+###
+
+POST http://localhost:1337/api/auth/local
+content-type: application/json
+
+{
+  "identifier": "aazam555@gmail.com",
+  "password": "852741!"
+}
+###
+GET http://localhost:1337/api/helps/42
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ1MjkyNjA4LCJleHAiOjE2NDc4ODQ2MDh9.hiRS4S8-veiFT1zMhl0OYGmQ9FilMfjtQGMOUYXTi3k
+
+###
+GET http://localhost:1337/api/helps?filters[id]=42&populate[categories][*]
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ1MTM4OTY2LCJleHAiOjE2NDc3MzA5NjZ9.ZTX_acwRKAPRMTydTTIQlPHvZjVyzVfKPNgFkfR_wLQ
+
+
+###
+
+POST http://localhost:1337/api/helps HTTP/1.1
+content-type: application/json
+
+{
+    "data":{
+        "name": "need this",
+        "description": "lorem ipsum"
+    }
+}
+
+###
+
+
+GET http://localhost:1337/api/helps?sort[0]=date:ASC
+###
+
+
+GET http://localhost:1337/api/helps/count
+###
+GET http://localhost:1337/api/helps?sort[0]=date:ASC&pagination[start]=0&populate[owner][fields][0]=username
+
+
+###
+
+GET http://localhost:1337/api/categories?filters[active]=true&fields[0]=name
+
+
+###
+GET http://localhost:1337/api/helps?sort[0]=createdAt:DESC&pagination[start]=0&pagination[limit]=25 
+###
+GET http://localhost:1337/api/helps/search/false/song/0
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ1MTM4OTY2LCJleHAiOjE2NDc3MzA5NjZ9.ZTX_acwRKAPRMTydTTIQlPHvZjVyzVfKPNgFkfR_wLQ
+###
+GET http://localhost:1337/api/helps/43?populate[owner][fields][0]=username
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjQ1MTM4OTY2LCJleHAiOjE2NDc3MzA5NjZ9.ZTX_acwRKAPRMTydTTIQlPHvZjVyzVfKPNgFkfR_wLQ
+
+###
+GET http://localhost:1337/api/helps?filters[slug]=happydays&populate[categories][*]&populate[owner][fields][0]=username&populate[categories][filters][active]=true
+
+
+###
+http://localhost:1337/api/helps?populate[categories][fields][0]=name&populate[categories][fields][1]=active
+
+###
+
+http://localhost:1337/api/helps?populate[categories][fields][0]=name&populate[categories][fields][1]=active&populate[categories][filters][name][$eq]=education
+
+
+
+###
+http://localhost:1337/api/helps?filters[verified]=true&populate[categories][fields][0]=name&populate[categories][fields][1]=active&populate[categories][filters][name][$eq]=education

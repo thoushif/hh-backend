@@ -1,0 +1,37 @@
+{
+  "name": "hh-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.0.6",
+    "@strapi/plugin-users-permissions": "4.0.6",
+    "@strapi/provider-email-sendgrid": "^4.0.7",
+    "@strapi/provider-upload-cloudinary": "^4.0.6",
+    "@strapi/strapi": "4.0.6",
+    "classnames": "^2.3.1",
+    "qs": "^6.10.3",
+    "slugify": "^1.6.5",
+    "sqlite3": "5.0.2",
+    "stopword": "^1.0.11",
+    "strapi-provider-email-sendgrid": "^3.6.8",
+    "strapi-provider-upload-cloudinary": "^3.6.8"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "67be58f7-d072-496f-a20d-8684274b067a"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
